@@ -608,7 +608,7 @@ body {
 /* Container */
 .record-route {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 13rem auto;
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
@@ -808,6 +808,7 @@ button[type="button"]:hover {
 
 
 /***************************    Navbar Links  *****************************************/
+/***************************    Navbar Links  *****************************************/
 .navLinks .links a {
   text-decoration: none;
   color: #000; 
@@ -820,4 +821,37 @@ button[type="button"]:hover {
   background-color: #0056b3;
   color: white; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom {
+  background-color: #000000;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicescard{
+  position: relative;
+  border-radius: 8px;
+  flex: 1;
+  display: flex
+;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 20px;
+  min-height: 360px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.service-container h2{
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 190px;
+  display: flex;
+  justify-content: center;
+  text-shadow: #0056cc;
 }
