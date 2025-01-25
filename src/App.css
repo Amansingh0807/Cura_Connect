@@ -37,12 +37,12 @@ h1 {
   font-weight: 900;
 }
 h1 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 900;
 }
 h2 {
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 36px;
+  font-weight: 600;
 }
 h3 {
   font-size: 28px;
@@ -836,14 +836,13 @@ button[type="button"]:hover {
   position: relative;
   border-radius: 8px;
   flex: 1;
-  display: flex
-;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 20px;
-  min-height: 360px;
+  min-height: 250px;
   margin: 0 10px;
   text-decoration: none;
 }
@@ -853,5 +852,35 @@ button[type="button"]:hover {
   margin-top: 190px;
   display: flex;
   justify-content: center;
-  text-shadow: #0056cc;
+  text-shadow: rgb(111, 255, 250) 5px 0 10px;
+}
+
+
+.container-down h2{
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.content-services h2{
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background: rgb(177, 241, 255);
+}
+
+
+.left-content{
+  display: flex;
+      gap: 50px;
+      padding-top: 40px;
+      padding-bottom: 60px;
+      width: 500px;
+      height: 380px;
+      padding: 41px;
 }

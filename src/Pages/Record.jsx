@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios"; // For interacting with Cloudinary or API
-import Hero from "../components/Hero.jsx"
+import Hero from "../components/Hero.jsx";
 
 const Record = ({ previousRecord }) => {
-
   const [formVisible, setFormVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -11,13 +10,41 @@ const Record = ({ previousRecord }) => {
     dob: "",
     height: "",
     weight: "",
-    medicines: [{ name: "", dosage: "" }, { name: "", dosage: "" }],
+    bmi: "", // Added BMI field
+    mobile: "",
+    bloodGroup: "",
+    medicalHistory: {
+      allergies: false,
+      chronicDiseases: false,
+      surgeries: false,
+      immunizations: false,
+      customDetails: "",
+    },
+    habits: {
+      smoking: false,
+      alcohol: false,
+      insurance: false,
+    },
+    medicines: [{ name: "", dosage: "" }],
     files: [],
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const updatedFormData = { ...formData, [name]: value };
+
+    // Automatically calculate BMI when height and weight are entered
+    if (name === "height" || name === "weight") {
+      const heightInMeters = updatedFormData.height / 100;
+      if (heightInMeters > 0 && updatedFormData.weight > 0) {
+        const bmi = (updatedFormData.weight / (heightInMeters ** 2)).toFixed(2);
+        updatedFormData.bmi = bmi;
+      } else {
+        updatedFormData.bmi = "";
+      }
+    }
+
+    setFormData(updatedFormData);
   };
 
   const handleMedicineChange = (index, e) => {
@@ -62,9 +89,8 @@ const Record = ({ previousRecord }) => {
   };
 
   return (
-    
     <div className="record-route">
-        <Hero  showParagraph={false} showImage={false}  />
+      <Hero showParagraph={false} showImage={false} />
       {!formVisible && previousRecord ? (
         <div className="record-details">
           <h2>Previous Record</h2>
@@ -73,6 +99,7 @@ const Record = ({ previousRecord }) => {
           <p><strong>Date of Birth:</strong> {previousRecord.dob}</p>
           <p><strong>Height:</strong> {previousRecord.height} cm</p>
           <p><strong>Weight:</strong> {previousRecord.weight} kg</p>
+          <p><strong>BMI:</strong> {previousRecord.bmi}</p>
           <h3>Medicines:</h3>
           {previousRecord.medicines.map((med, index) => (
             <p key={index}>{med.name} - {med.dosage}</p>
@@ -139,6 +166,34 @@ const Record = ({ previousRecord }) => {
               required
             />
           </label>
+          <label>
+            BMI:
+            <input
+              type="text"
+              name="bmi"
+              value={formData.bmi}
+              readOnly
+            />
+          </label>
+          
+ <label>
+            Blood Group:
+            <input
+              type="text"
+              name="bloodGroup"
+              placeholder="e.g A+"
+              value={formData.bloodGroup}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+
+    
+
+
+         
+
+      
 
           <h3>Medicines</h3>
           {formData.medicines.map((medicine, index) => (
@@ -159,6 +214,7 @@ const Record = ({ previousRecord }) => {
                   type="text"
                   name="dosage"
                   value={medicine.dosage}
+                  placeholder="e.g. 3 tablet daily "
                   onChange={(e) => handleMedicineChange(index, e)}
                   required
                 />

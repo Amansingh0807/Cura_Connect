@@ -87,7 +87,7 @@ const Footer = ({showFooter = true}) => {
       
       </footer>}
       <div className="footer-bottom">
-          <p>© 2021 Cura Connect. All Rights Reserved</p>
+          <p>© 2025 Cura Connect. All Rights Reserved</p>
         </div>
     </>
   );

@@ -26,15 +26,48 @@ const Services = () => {
       },
   ];
 
+  const TestomonialArray= [
+    {
+    
+      imageUrl: "/dep3.png",
+    },
+    {
+     
+      imageUrl: "/dep4.png",
+    },
+    {
+      
+      imageUrl: "/dep5.png",
+    },
+    {
+      
+      imageUrl: "/departments/neuro.jpg",
+    },
+    {
+      
+        imageUrl: "/departments/neuro.jpg",
+      },
+      {
+      
+        imageUrl: "/departments/neuro.jpg",
+      },
+      {
+      
+        imageUrl: "/departments/neuro.jpg",
+      },
+  ];
+
+
+
   const responsive = {
     extraLarge: {
       breakpoint: { max: 3000, min: 1324 },
-      items: 4,
+      items: 5,
       slidesToSlide: 1, // optional, default to 1.
     },
     large: {
       breakpoint: { max: 1324, min: 1005 },
-      items: 4,
+      items: 5,
       slidesToSlide: 1, // optional, default to 1.
     },
     medium: {
@@ -52,7 +85,7 @@ const Services = () => {
   return (
     <>
      <div className="service-container">
-        <h2>Our Services</h2>
+        <h2>What Would You Like To Do Today?</h2>
         <Carousel
           responsive={responsive}
           removeArrowOnDeviceType={[
@@ -71,8 +104,33 @@ const Services = () => {
           })}
         </Carousel>
       </div>
+
+<div className="content-services">
+<h2>Our Mission is to make India Healthy again</h2>
+<p className="left-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. In sed nostrum corporis deleniti expedita nulla laborum mollitia perspiciatis ad repudiandae ea ipsa, ut nesciunt optio! Atque expedita ratione assumenda repudiandae!
+
+</p>
+</div>
+
       <div className="container-down">
-        <h2>Trust od India</h2>
+        <h2>Trust of India</h2>
+        <Carousel
+          responsive={responsive}
+          removeArrowOnDeviceType={[
+            // "superLargeDesktop",
+            // "desktop",
+            "tablet",
+            "mobile",
+          ]}
+        >
+          {TestomonialArray.map((depart, index) => {
+            return (
+              <div key={index} className="servicescard">
+                <img src={depart.imageUrl} alt="Department" />
+              </div>
+            );
+          })}
+        </Carousel>
       </div>
     </>
   );

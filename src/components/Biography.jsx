@@ -8,7 +8,6 @@ const Biography = ({imageUrl}) => {
           <img src={imageUrl} alt="whoweare" />
         </div>
         <div className="banner">
-          <p>Biography</p>
           <h3>Who We Are</h3>
           <p>
           we simplify access to healthcare by providing comprehensive knowledge of all medical departments. Our platform empowers users to make informed decisions and easily schedule appointments with healthcare professionals. Through innovative technology, we bridge the gap between patients and providers, ensuring healthcare is both accessible and convenient. Our mission is to enhance health outcomes with seamless, user-friendly solutions.
