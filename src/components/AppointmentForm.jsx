@@ -96,6 +96,7 @@ const AppointmentForm = () => {
             <input
               type="text"
               placeholder="First Name"
+              color="white"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />

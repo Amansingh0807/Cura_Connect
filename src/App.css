@@ -189,7 +189,8 @@ h6 {
   font-size: 24px;
   padding: 10px 10px 10px 40px;
   border-radius: 7px;
-  border: 1px solid gray;
+  border: 1px solid #000000;
+  background: white;
 }
 .form-component button {
   padding: 10px 35px;
@@ -661,6 +662,7 @@ button {
 
 button:hover {
   background: #004494;
+  color: white;
 }
 
 button[type="button"] {
@@ -883,4 +885,11 @@ button[type="button"]:hover {
       width: 500px;
       height: 380px;
       padding: 41px;
+}
+
+
+.logoutBtn-btn{
+  background : rgb(255, 66, 66);
+  color: black;
+  border-radius: 20px;
 }

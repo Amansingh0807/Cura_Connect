@@ -82,7 +82,7 @@ const Navbar = () => {
             </Link>
           </div>
           {isAuthenticated ? (
-            <button className="logoutBtn btn" onClick={handleLogout}>
+            <button className="logoutBtn-btn" onClick={handleLogout}>
               LOGOUT
             </button>
           ) : (
