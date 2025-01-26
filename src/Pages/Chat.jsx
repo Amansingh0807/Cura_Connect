@@ -17,7 +17,8 @@ const Chat = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/chat/send", {
+      const response = await fetch("http://localhost:8080/api/send", {
+        method: "POST",
         input: inputMessage,
       });
 
