@@ -29,32 +29,38 @@ const Services = () => {
   const TestomonialArray= [
     {
     
-      imageUrl: "/dep3.png",
+      imageUrl: "/test1.png",
+     
     },
     {
      
-      imageUrl: "/dep4.png",
+      imageUrl: "/test6.png",
+    
     },
     {
       
-      imageUrl: "/dep5.png",
+      imageUrl: "/test3.png",
     },
     {
       
-      imageUrl: "/departments/neuro.jpg",
+      imageUrl: "test4.png",
     },
     {
       
-        imageUrl: "/departments/neuro.jpg",
+        imageUrl: "test5.png",
       },
       {
       
-        imageUrl: "/departments/neuro.jpg",
+        imageUrl: "test2.png",
       },
       {
       
-        imageUrl: "/departments/neuro.jpg",
+        imageUrl: "test7.png",
       },
+      {
+      
+        imageUrl: "test8.png",
+      }
   ];
 
 
@@ -126,7 +132,7 @@ const Services = () => {
           {TestomonialArray.map((depart, index) => {
             return (
               <div key={index} className="servicescard">
-                <img src={depart.imageUrl} alt="Department" />
+                <img src={depart.imageUrl} height="300px" width="300px" alt="Department" />
               </div>
             );
           })}
