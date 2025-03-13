@@ -100,10 +100,12 @@ npm start
 
 Cura_Connect_Frontend
 │── public
+
 │   ├── assets
 │   │   ├── logo.png
 │   ├── index.html
 │── src
+
 │   │── assets/
 │   │── components/
 │   │   │── Hero.js
@@ -112,6 +114,7 @@ Cura_Connect_Frontend
 │   │   │── MessageForm.js
 │   │   │── AdminReplyForm.js
 │   │   │── SymptomChecker.js
+
 │   │── pages/
 │   │   │── Home.js
 │   │   │── Messages.js
@@ -123,9 +126,13 @@ Cura_Connect_Frontend
 │   │── styles/
 │   │── App.js
 │   │── index.js
+
 │── .env
+
 │── .gitignore
+
 │── package.json
+
 │── README.md
 
 
@@ -165,10 +172,11 @@ videoCall.start();
 notifications.subscribe(userId, (message) => {
   console.log(`New Notification: ${message}`);
 });
-
+```
 
 ### 🏥 Doctor Feature
 
+```sh
 // ✅ View patient queries and send responses
 const patientQueries = queries.getAll();
 queries.reply({ queryId, doctorId, response: "You need a consultation." });
@@ -185,7 +193,7 @@ console.log(patientRecords);
 const patientMessage = "I have a headache and nausea.";
 const AIResponse = AI.analyzeSymptoms(patientMessage);
 console.log(`AI Suggestion: ${AIResponse}`);
-
+```
 ---
 
 
