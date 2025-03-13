@@ -9,12 +9,14 @@ const Home = () => {
     <>
       <Hero
         title={
-          "Welcome To Cura Connectcls"
+          "Welcome To Cura Connect"
         }
-        imageUrl={"/hero.png"}
-      
+        imageUrl={"/medical.png"}
+       
+      imageHeight="100px"
+  imageWidth="100%"
       />
-      <Biography imageUrl={"/about.png"} />
+      <Biography imageUrl={"/Doc.png"} />
       <Departments />
       <MessageForm />
     </>

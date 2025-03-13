@@ -381,6 +381,7 @@ footer .content div:last-child div svg {
   footer .content div:nth-child(3) {
     width: 100%;
   }
+
 }
 @media (max-width: 390px) {
   footer .content div:nth-child(3) ul li {
@@ -892,4 +893,35 @@ button[type="button"]:hover {
   background : rgb(255, 66, 66);
   color: black;
   border-radius: 20px;
+}
+
+/*********************************************************************************************************/
+
+nav {
+  background: rgba(255, 255, 255, 0.9); /* Default background */
+  transition: background 0.3s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    background: rgba(240, 240, 240, 0.98);
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    background: rgba(230, 230, 230, 1);
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    background: rgba(220, 220, 220, 1);
+  }
 }

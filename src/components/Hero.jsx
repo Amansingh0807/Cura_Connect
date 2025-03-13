@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = ({ title, imageUrl, showParagraph = true, showImage = true }) => {
+const Hero = ({ title, imageUrl, showParagraph = true, showImage = true, imageHeight = "auto", imageWidth = "100%" }) => {
   return (
     <>
       <div className="hero container">
