@@ -52,6 +52,9 @@ const Departments = () => {
       name: "Endocrinology",
       imageUrl: "/departments/ent.jpg",
     },
+
+
+    //from here i need to get up the images
     {
       name: "Gastroenterology",
       imageUrl: "/departments/ent.jpg",

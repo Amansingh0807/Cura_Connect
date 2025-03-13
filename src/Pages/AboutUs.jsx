@@ -6,9 +6,9 @@ const AboutUs = () => {
     <>
       <Hero
         title={"Learn More About Us"}
-        imageUrl={"/about.png"}
+        imageUrl={"/medical.png"}
       />
-      <Biography imageUrl={"/whoweare.png"} />
+      <Biography imageUrl={"/intro.png"} />
     </>
   );
 };
