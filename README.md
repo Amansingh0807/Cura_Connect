@@ -16,10 +16,9 @@ This repository contains the **frontend code** of the **Cura Connect** web appli
 - [Installation and Setup](#-installation-and-setup)  
 - [Project Structure](#-project-structure)  
 - [Usage Guide](#-usage-guide)  
-- [API Endpoints](#-api-endpoints)  
-- [Screenshots](#-screenshots)  
+ 
 - [Contributing](#-contributing)  
-- [License](#-license)  
+
 - [Contact](#-contact)  
 
 ---
@@ -215,3 +214,8 @@ To contribute:
    ```
 7. Open a pull request and describe the changes you made, mentioning the issue number you're addressing.
 8. ⏳ Wait for review and feedback from the maintainers.
+
+
+## 📞 Contact
+Email: amansinghg080704@gmail.com
+LinkedIn: ![amansingh08](https://www.linkedin.com/in/amansingh08/)
